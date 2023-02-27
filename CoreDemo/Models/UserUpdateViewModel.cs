@@ -8,11 +8,11 @@ namespace CoreDemo.Models
 {
     public class UserUpdateViewModel
     {
-        [Required(ErrorMessage = "Lütfen ad ve soyad giriniz.")]
+        [Required(ErrorMessage = "Please Write Your Name And Surname.")]
         public string namesurname { get; set; }
         public string username { get; set; }
 
-        [Required(ErrorMessage = "Lütfen mail giriniz.")]
+        [Required(ErrorMessage = "Please Writer Your Mail Adress.")]
         public string mail { get; set; }
         public string imageurl { get; set; }
         public string password { get; set; }

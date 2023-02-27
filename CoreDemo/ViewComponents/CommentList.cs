@@ -16,17 +16,17 @@ namespace CoreDemo.ViewComponents
                 new UserComment
                 {
                     Id = 1,
-                    UserName = "Şevval"
+                    UserName = "Furkan"
                 },
                 new UserComment
                 {
                     Id=2,
-                    UserName = "Kerem"
+                    UserName = "John"
                 },
                 new UserComment
                 {
                     Id = 3,
-                    UserName = "Ayaz"
+                    UserName = "Mary"
                 }
             };
             return View(commentvalues);

@@ -4,35 +4,35 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h1>Yazar Ajax İşlemleri</h1>
+<h1>Writer Ajax Transformations</h1>
 <br />
-<button type="button" id="btngetlist" class="btn btn-outline-primary">Yazar Listesi</button>
+<button type="button" id="btngetlist" class="btn btn-outline-primary">Writer List</button>
 <br /><br />
 <div>
-    <input type="text" id="writerid" placeholder="Yazar Id Değerini Girin" class="form-control" />
+    <input type="text" id="writerid" placeholder="Write Writer Id Value" class="form-control" />
 </div>
 <br />
-<button type="button" id="btngetbyid" class="btn btn-outline-success">Yazar Getir</button>
+<button type="button" id="btngetbyid" class="btn btn-outline-success">Get Writer</button>
 <br /><br />
 <div>
     <input type="text" class="form-control" id="txtwriterid" placeholder="Yazar Id" />
     <br />
-    <input type="text" class="form-control" id="txtwritername" placeholder="Yazar Adı" />
+    <input type="text" class="form-control" id="txtwritername" placeholder="Writer Name" />
 </div>
 <br />
-<button type="button" id="btnaddwriter" class="btn btn-outline-info">Yazar Ekle</button>
+<button type="button" id="btnaddwriter" class="btn btn-outline-info">Add Writer</button>
 <br /><br />
  <div>
-    <input type="text" class="form-control" id="txtid" placeholder="Silinecek Yazar Id" />
+    <input type="text" class="form-control" id="txtid" placeholder="Writer Id To Be Deleted" />
 </div>
 <br />
-<button type="button" id="btndeletewriter" class="btn btn-outline-danger">Yazar Sil</button>
+<button type="button" id="btndeletewriter" class="btn btn-outline-danger">Delete Writer</button>
 <br /> <br />
-<input type="text" id="txtidupdate" class="form-control" placeholder="Güncellenecek Yazar Id"/>
+<input type="text" id="txtidupdate" class="form-control" placeholder="Writer Id To Be Updated"/>
 <br />
-<input type="text" id="txtnameupdate" class="form-control" placeholder="Güncellenecek Yazar Adı"/>
+<input type="text" id="txtnameupdate" class="form-control" placeholder="Writer Name To Be Updated"/>
 <br />
-<button type="button" id="btnupdatewriter" class="btn btn-outline-warning">Yazar Güncelle</button>
+<button type="button" id="btnupdatewriter" class="btn btn-outline-warning">Update Writer</button>
 <div id="writerlist">
 
 </div>
@@ -90,7 +90,7 @@
                 data: writer,
                 success: function (func) {
                     let result = jQuery.parseJSON(func);
-                    alert("Yazar başarılı bir şekilde eklendi.");
+                    alert("Writer Successfully Added.");
                 }
             });
         });
@@ -101,7 +101,7 @@
                 type: "post",
                 dataType: "json",
                 success: function (func) {
-                    alert("Yazar Silme İşlemi Başarılı Bir Şekilde Gerçekleşti.");
+                    alert("Writer Successfully Deleted.");
                 }
             });
         });
@@ -115,7 +115,7 @@
                 url: "/Admin/Writer/UpdateWriter/",
                 data: writer,
                 success: function (func) {
-                    alert("Güncelleme başarılı");
+                    alert("Update Is Successfull");
                 }
             });
         });

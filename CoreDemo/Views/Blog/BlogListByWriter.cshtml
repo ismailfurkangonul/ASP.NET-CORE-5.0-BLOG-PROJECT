@@ -6,17 +6,17 @@
     }
 
     
-<h1>Yazarın Blogları</h1>
+<h1>The Writer's Blogs</h1>
 <h1>@ViewBag.v</h1>
 <table class="table table-bordered">
     <tr>
         <th>#</th>
-        <th>Blog Başlığı</th>
-        <th>Oluşturulma Tarihi</th>
-        <th>Kategori</th>
-        <th>Durum</th>
-        <th>Sil</th>
-        <th>Düzenle</th>
+        <th>Blog Title</th>
+        <th>Created Date</th>
+        <th>Category</th>
+        <th>Status</th>
+        <th>Delete</th>
+        <th>Edit</th>
 
     </tr>
     @foreach (var item in Model)
@@ -30,18 +30,18 @@
             <td>
                 @if (item.BlogStatus)
                 {
-                    <span class="badge badge-success">Aktif</span>
+                    <span class="badge badge-success">Active</span>
                 }
                 else
                 {
-                    <span class="badge badge-secondary">Pasif</span>
+                    <span class="badge badge-secondary">Passive</span>
                 }
             </td>
-            <td><a href="/Blog/DeleteBlog/@item.BlogId" class="btn btn-danger">Sil</a></td>
-            <td><a href="/Blog/EditBlog/@item.BlogId" class="btn btn-warning">Düzenle</a></td>
+            <td><a href="/Blog/DeleteBlog/@item.BlogId" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Blog/EditBlog/@item.BlogId" class="btn btn-warning">Edit</a></td>
         </tr>
     }
 </table>
-<a href="/Blog/BlogAdd/" class="btn btn-primary">Yeni Blog Oluştur</a>
+<a href="/Blog/BlogAdd/" class="btn btn-primary">Create New Blog</a>
 
 

@@ -8,10 +8,10 @@ namespace CoreDemo.Models
 {
     public class UserSignInViewModel
     {
-        [Required(ErrorMessage ="Lütfen Kullanıcı Adını Girin!")]
+        [Required(ErrorMessage = "Please Write Your Username!")]
         public string username { get; set; }
 
-        [Required(ErrorMessage = "Lütfen Şifrenizi  Girin!")]
+        [Required(ErrorMessage = "Please Write Your Password!")]
         public string password { get; set; }
     }
 }

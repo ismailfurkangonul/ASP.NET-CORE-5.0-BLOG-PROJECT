@@ -23,7 +23,7 @@
                             <div class="b-grid-top">
                                 <div class="blog_info_left_grid">
                                     <a href="single.html">
-                                        <img src="~/CoreBlogTema/images/b1.jpg" class="img-fluid" alt="">
+                                        <img src="@item.BlogThumbnailImage" style="width:950px;" class="img-fluid" alt="">
                                     </a>
                                 </div>
                                 <div class="blog-info-middle">
@@ -35,12 +35,12 @@
                                         </li>
                                         <li class="mx-2">
                                             <a href="#">
-                                                <i class="far fa-thumbs-up"></i> 0 Beğeni
+                                                <i class="far fa-thumbs-up"></i> 0 Like
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <i class="far fa-comment"></i> 0 Yorum
+                                                <i class="far fa-comment"></i> 0 Comment
                                             </a>
                                         </li>
 
@@ -53,12 +53,12 @@
                             </h3>
                             <p>
                                 @item.BlogContent
+                                
                             </p>
-                            <a href="/Blog/Index/" class="btn btn-primary read-m">Blog Listesi</a>
+                            <a href="/Blog/Index/" class="btn btn-primary read-m">Blog List</a>
                         </div>
                     }
 
-                    @*@await Html.PartialAsync("~/Views/Comment/CommentListByBlog.cshtml")*@
 
                     @await Component.InvokeAsync("CommentListByBlog",new { id = ViewBag.i })
 
@@ -102,23 +102,25 @@
                                      aria-valuemax="100"></div>
                             </div>
                         </div>
+                        @foreach (var item in Model)
+                        {
+                            
+                        
                         <div class="single-gd tech-btm">
-                            <h4>Son Eklenen Post</h4>
+                            <h4>Last Post</h4>
                             <div class="blog-grids">
-                                <div class="blog-grid-left">
-                                    <a href="single.html">
-                                        <img src="~/CoreBlogTema/images/b1.jpg" class="img-fluid" alt="">
-                                    </a>
-                                </div>
+                         
                                 <div class="blog-grid-right">
 
                                     <h5>
-                                        <a href="single.html">Pellentesque dui, non felis. Maecenas male</a>
+                                                                @await Component.InvokeAsync("WriterLastBlog")
+
                                     </h5>
                                 </div>
                                 <div class="clearfix"> </div>
                             </div>
                         </div>
+                        }
                     </div>
 
                 </aside>

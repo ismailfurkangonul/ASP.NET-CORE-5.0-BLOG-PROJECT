@@ -6,14 +6,14 @@
     Layout = "~/Views/Shared/WriterLayout.cshtml";
 }
 
-<h1>Giden Kutusu</h1>
+<h1>Send Box</h1>
 <table class="table table-bordered">
     <tr>
         <th>#</th>
-        <th>Konu</th>
-        <th>Alıcı</th>
-        <th>Tarih</th>
-        <th>Mesajı Aç</th>
+        <th>Subject</th>
+        <th>Receiver</th>
+        <th>Date</th>
+        <th>Open Message</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -22,9 +22,9 @@
             <td>@item.Subject</td>
             <td>@item.ReceiverUser.WriterName</td>
             <td>@(((DateTime)item.MessageDate).ToString("dd-MMM-yyyy"))</td>
-            <td><a href="/Message/MessageDetails/@item.MessageId" class="btn btn-success">Mesajı Aç</a></td>
+            <td><a href="/Message/MessageDetails/@item.MessageId" class="btn btn-success">Open Message</a></td>
         </tr>
     }
 </table>
-<a href="/Message/SendMessage/" class="btn btn-primary">Yeni Mesaj Oluştur</a>
+<a href="/Message/SendMessage/" class="btn btn-primary">Create New Message</a>
 

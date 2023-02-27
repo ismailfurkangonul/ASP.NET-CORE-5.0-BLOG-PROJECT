@@ -5,14 +5,14 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h1>Api ile Personel Güncelleme Sayfası</h1>
+<h1>Employee Update Page With API </h1>
 <form method="post">
     <label>Id</label>
     @Html.TextBoxFor(x => x.Id, new { @class = "form-control" })
     <br />
-    <label>Personel</label>
+    <label>Employee</label>
     @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
     <br />
-    <button class="btn btn-outline-success">Güncelle</button>
+    <button class="btn btn-outline-success">Update</button>
 </form>
 

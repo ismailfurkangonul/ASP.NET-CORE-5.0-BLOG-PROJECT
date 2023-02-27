@@ -8,20 +8,20 @@ namespace CoreDemo.Models
 {
     public class UserSignUpViewModel
     {
-        [Display(Name = "Ad Soyad")]
-        [Required(ErrorMessage = "Lütfen ad ve soyad giriniz.")]
+        [Display(Name = "Name Surname")]
+        [Required(ErrorMessage = "Please Write Your Name And Surname.")]
         public string NameSurname { get; set; }
-        [Display(Name = "Şifre")]
-        [Required(ErrorMessage = "Lütfen şifre giriniz.")]
+        [Display(Name = "Password")]
+        [Required(ErrorMessage = "Please Write Your Password.")]
         public string Password { get; set; }
-        [Display(Name = "Şifre Tekrar")]
-        [Compare("Password", ErrorMessage = "Şifreler uyuşmuyor.")]
+        [Display(Name = "Rewrite Password")]
+        [Compare("Password", ErrorMessage = "Passwords Aren't Match.")]
         public string ConfirmPassword { get; set; }
-        [Display(Name = "Mail Adresi")]
-        [Required(ErrorMessage = "Lütfen mail adresinizi giriniz.")]
+        [Display(Name = "Mail Adress")]
+        [Required(ErrorMessage = "Please Write Your Mail Adress")]
         public string Mail { get; set; }
-        [Display(Name = "Kullanıcı Adı")]
-        [Required(ErrorMessage = "Lütfen kullanıcı adınızı giriniz.")]
+        [Display(Name = "Username")]
+        [Required(ErrorMessage = "Please Write Your Username.")]
         public string UserName { get; set; }
         public bool IsAcceptTheContract { get; set; }
     }

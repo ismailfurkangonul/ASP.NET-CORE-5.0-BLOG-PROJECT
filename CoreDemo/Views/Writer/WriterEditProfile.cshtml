@@ -8,15 +8,15 @@
     <div class="col-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Yazar Profil Bilgileri Düzenleme</h4>
+                <h4 class="card-title">Edit Writer Profile Informations</h4>
                 <br />
                 <form class="forms-sample" method="post">
                     <div class="form-group">
-                        <label for="exampleInputName1">Yazar Ad Soyad</label>
+                        <label for="exampleInputName1">Writer Name Surname</label>
                         <input type="text" asp-for="@Model.namesurname" class="form-control" />
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail3">Kullanıcı Adı</label>
+                        <label for="exampleInputEmail3">Username</label>
                         <input type="text" asp-for="@Model.username" class="form-control" />
                     </div>
                     <div class="form-group">
@@ -24,16 +24,16 @@
                         <input type="text" asp-for="@Model.mail" class="form-control" />
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail3">Yeni Şifreniz</label>
+                        <label for="exampleInputEmail3">New Password</label>
                         <input type="text" asp-for="@Model.password" class="form-control" />
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail3">Resim Yolu</label>
+                        <label for="exampleInputEmail3">Image Url</label>
                         <input type="text" asp-for="@Model.imageurl" class="form-control" />
                     </div>
 
-                    <button type="submit" class="btn btn-gradient-primary mr-2">Güncelle</button>
-                    <button asp-controller="Dashboard" asp-action="Index" class="btn btn-light">İptal</button>
+                    <button type="submit" class="btn btn-gradient-primary mr-2">Update</button>
+                    <button asp-controller="Dashboard" asp-action="Index" class="btn btn-light">Cancel</button>
                 </form>
             </div>
         </div>

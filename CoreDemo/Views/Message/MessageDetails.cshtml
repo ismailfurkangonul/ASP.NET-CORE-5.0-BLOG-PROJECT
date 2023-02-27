@@ -4,17 +4,17 @@
     Layout = "~/Views/Shared/WriterLayout.cshtml";
 }
 
-<h1>Mesaj Detay Sayfası</h1>
+<h1>Message Detail Page</h1>
 <br />
-    @Html.Label("Mesaj Id")
+    @Html.Label("Message Id")
     @Html.TextBoxFor(x => x.MessageId, new { @class = "form-control" })
     <br />
-    @Html.Label("Mesaj Başlığı")
+    @Html.Label("Message Subject")
     @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
     <br />
-    @Html.Label("Mesaj İçeriği")
+    @Html.Label("Message Content")
     @Html.TextAreaFor(x => x.MessageDetails,10,3, new { @class = "form-control" })
     <br />
-    <button class="btn btn-success">Mesajlara Dön</button>
+    <button class="btn btn-success">Go Back To Messages</button>
 
 
